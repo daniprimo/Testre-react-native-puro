@@ -1,10 +1,15 @@
+import { api } from './../../api';
 import {showMocks} from 'test/mocks/showMocks';
 import {showService} from '../showService';
 
 describe('showService', () => {
   describe('getEpisodes', () => {
     test('when API return episode list return all season names', async () => {
+      //const spyon = jest.spyOn{api, 'post'};
+      
       const groupedEpisodes = await showService.getEpisodes('250');
+      
+      //expect(spyon).toBeCalled(1);
 
       expect(groupedEpisodes.seasonNames.includes('1')).toBeTruthy();
       expect(groupedEpisodes.seasonNames.includes('2')).toBeTruthy();

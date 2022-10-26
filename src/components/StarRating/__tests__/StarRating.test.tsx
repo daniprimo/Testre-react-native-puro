@@ -2,6 +2,7 @@ import React from 'react';
 import {render} from 'test-utils';
 import {StarRating} from '../StarRating';
 
+
 describe('StarRating', () => {
   describe('rating was passed', () => {
     it('show the average', () => {
@@ -21,6 +22,7 @@ describe('StarRating', () => {
       const {container} = render(<StarRating />, {wrapper: undefined});
 
       expect(container.children.length).toEqual(0);
+      //expect(container.children).toEqual([]);
     });
   });
 });

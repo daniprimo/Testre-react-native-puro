@@ -22,6 +22,8 @@ describe('SeasonModal', () => {
     });
 
     expect(getAllByText(/season/i).length).toBe(3);
+    //expect(getAllByText('season', {exact: false).length).toBe(3);
+  
   });
 
   test('call onSelectSeason with correct season when season option was pressed', () => {
